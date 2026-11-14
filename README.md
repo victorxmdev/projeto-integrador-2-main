@@ -103,6 +103,31 @@ Todas as páginas incluem controles para aumentar, diminuir e restaurar o tamanh
 npm test
 ```
 
+### Testes de navegador com Selenium
+
+Os testes Selenium acessam o site em `http://localhost:3000`, verificam a página inicial e a busca de fotógrafos, e fazem login e logout com a conta de demonstração. Inicie o servidor em um terminal:
+
+```bash
+cd ".\projeto-integrador-DRP01-main"
+npm install
+npm start
+```
+
+Em outro terminal, execute a suíte (Google Chrome instalado):
+
+```bash
+cd ".\projeto-integrador-DRP01-main"
+npm run test:browser
+```
+
+Para gerar o relatório XML JUnit em `relatorio-selenium-fotecta.xml`:
+
+```bash
+npm run test:browser:report
+```
+
+O Selenium Manager localiza o driver do navegador. Para testar outra URL, defina `FOTECTA_URL` antes de executar os testes.
+
 ## Observação
 
 Esta versão foi migrada para JavaScript/Node para manter a mesma proposta do projeto original, com visual e fluxo funcional adaptados para execução local e uso didático.
